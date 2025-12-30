@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="موقع زواج السعودية - رقم 1 في المملكة لتسهيل الزواج للمواطنين والمقيمين. زواج مضمون في أسبوع واحد بإذن الله. خدمة موثوقة ومعتمدة">
+    <meta name="keywords" content="زواج السعودية, تزويج, زواج سعودي, زواج عربي, زواج مسلم, زواج شرعي, مواقع زواج, زواج سريع, تعدد زوجات, الزواج في السعودية, matrimony Saudi, زواج النور, زواج الصالحين, موقع زواج موثوق, تزويج السعودية, زواج بالمؤقت, زواج مسيار, زواج المواطنين, زواج المقيمين, عقد زواج, مخطوبة, زفاف, عروس, عريس, خطوبة, روابط زواج, مؤسسة زواج">
+    <title>زواج السعودية - الموقع الأول للزواج الموثوق في المملكة</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reset وإعدادات عامة */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+        }
+        
+        :root {
+            --primary-color: #f06292;
+            --primary-light: #ff94c2;
+            --primary-dark: #ba2d65;
+            --secondary-color: #4fc3f7;
+            --text-color: #333;
+            --light-bg: #fff5f7;
+            --white: #ffffff;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+        
+        body {
+            background-color: var(--white);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* أنميشن للعناصر */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes slideIn {
+            from { transform: translateX(-30px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        /* الهيدر */
+        header {
+            background: linear-gradient(135deg, var(--white) 0%, var(--light-bg) 100%);
+            padding: 20px 0;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            animation: slideIn 1s ease-out;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo-icon {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .logo-text h1 {
+            color: var(--primary-dark);
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+        
+        .logo-text p {
+            color: var(--primary-color);
+            font-size: 0.9rem;
+        }
+        
+        .stats {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+        
+        .stat-item {
+            text-align: center;
+            background: var(--white);
+            padding: 10px 15px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            min-width: 120px;
+        }
+        
+        .stat-number {
+            color: var(--primary-dark);
+            font-size: 1.8rem;
+            font-weight: bold;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        /* قسم المقدمة */
+        .hero {
+            padding: 60px 0;
+            background: var(--light-bg);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, var(--primary-light) 0%, transparent 70%);
+            opacity: 0.3;
+            border-radius: 50%;
+        }
+        
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            animation: fadeIn 1.5s ease-out;
+        }
+        
+        .hero-text h2 {
+            font-size: 2.5rem;
+            color: var(--primary-dark);
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+        
+        .hero-text p {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            color: #555;
+        }
+        
+        .trust-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--white);
+            padding: 15px 25px;
+            border-radius: 50px;
+            box-shadow: var(--shadow);
+            margin-top: 20px;
+            animation: pulse 2s infinite;
+        }
+        
+        .trust-badge i {
+            color: #4CAF50;
+            font-size: 1.5rem;
+        }
+        
+        .hero-image {
+            position: relative;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .hero-image img:hover {
+            transform: scale(1.02);
+        }
+        
+        /* قسم الأخبار العاجلة */
+        .news-section {
+            padding: 40px 0;
+            background: linear-gradient(to right, #f8f9fa, #e9ecef);
+        }
+        
+        .section-title {
+            text-align: center;
+            color: var(--primary-dark);
+            font-size: 2rem;
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary-color);
+            border-radius: 2px;
+        }
+        
+        .news-container {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: var(--shadow);
+            margin-top: 30px;
+            animation: fadeIn 1s ease-out;
+        }
+        
+        .news-ticker {
+            background: #f0f8ff;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-right: 5px solid var(--secondary-color);
+        }
+        
+        .news-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .news-title {
+            color: var(--primary-dark);
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .live-badge {
+            background: #ff4757;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            animation: pulse 1.5s infinite;
+        }
+        
+        .news-link {
+            display: inline-block;
+            background: var(--secondary-color);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: var(--transition);
+        }
+        
+        .news-link:hover {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+        }
+        
+        /* قسم الشهادات */
+        .testimonials {
+            padding: 60px 0;
+            background: var(--white);
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .testimonial-card {
+            background: var(--light-bg);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            animation: fadeIn 1s ease-out;
+            animation-fill-mode: both;
+        }
+        
+        .testimonial-card:nth-child(1) { animation-delay: 0.2s; }
+        .testimonial-card:nth-child(2) { animation-delay: 0.4s; }
+        .testimonial-card:nth-child(3) { animation-delay: 0.6s; }
+        
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary-light);
+        }
+        
+        .testimonial-info h4 {
+            color: var(--primary-dark);
+            margin-bottom: 5px;
+        }
+        
+        .testimonial-info .location {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+        
+        .testimonial-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+        
+        .rating {
+            color: #FFC107;
+        }
+        
+        .saudi-dialect {
+            background: #e3f2fd;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            color: #1565c0;
+        }
+        
+        /* قسم التواصل */
+        .contact-section {
+            padding: 60px 0;
+            background: linear-gradient(135deg, var(--light-bg) 0%, #f0f4ff 100%);
+            text-align: center;
+        }
+        
+        .contact-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: white;
+            padding: 20px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-top: 30px;
+            box-shadow: 0 10px 20px rgba(240, 98, 146, 0.3);
+            transition: var(--transition);
+            animation: pulse 2s infinite;
+        }
+        
+        .contact-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px rgba(240, 98, 146, 0.4);
+        }
+        
+        .contact-note {
+            margin-top: 20px;
+            color: #666;
+            font-size: 0.95rem;
+        }
+        
+        /* الإعلانات المتحركة */
+        .ads-section {
+            padding: 40px 0;
+            background: var(--white);
+            overflow: hidden;
+        }
+        
+        .ad-container {
+            background: linear-gradient(90deg, var(--primary-light), var(--secondary-color));
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            animation: fadeIn 1s ease-out;
+        }
+        
+        .ad-text {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .ad-subtext {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        
+        .ad-icon {
+            position: absolute;
+            font-size: 5rem;
+            opacity: 0.2;
+            top: 50%;
+            transform: translateY(-50%);
+            animation: float 5s ease-in-out infinite;
+        }
+        
+        .ad-icon.left {
+            left: 20px;
+        }
+        
+        .ad-icon.right {
+            right: 20px;
+        }
+        
+        /* الفوتر */
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 50px 0 20px;
+            margin-top: 50px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            color: var(--primary-light);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--primary-color);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary-light);
+            padding-right: 5px;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #3a506b;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        /* تأثيرات إضافية */
+        .floating-icon {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: white;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            cursor: pointer;
+            transition: var(--transition);
+            animation: pulse 2s infinite;
+        }
+        
+        .floating-icon:hover {
+            transform: scale(1.1);
+        }
+        
+        /* الوسائط المتعددة */
+        @media (max-width: 992px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .stats {
+                width: 100%;
+                justify-content: space-around;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-text h2 {
+                font-size: 2rem;
+            }
+            
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stat-item {
+                min-width: 100px;
+                padding: 8px 12px;
+            }
+            
+            .floating-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+                bottom: 20px;
+                left: 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .logo-text h1 {
+                font-size: 1.5rem;
+            }
+            
+            .contact-button {
+                padding: 15px 30px;
+                font-size: 1.1rem;
+            }
+            
+            .ad-text {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- زر التواصل العائم -->
+    <div class="floating-icon" id="contactFloat">
+        <i class="fas fa-comments"></i>
+    </div>
+
+    <!-- الهيدر -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-heart logo-icon"></i>
+                    <div class="logo-text">
+                        <h1>زواج السعودية</h1>
+                        <p>الموقع الأول للزواج الموثوق في المملكة</p>
+                    </div>
+                </div>
+                
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-number">١٢٧٨٤</span>
+                        <span class="stat-label">زيارة اليوم</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">٨٤٣</span>
+                        <span class="stat-label">زواج ناجح</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">٩٨٪</span>
+                        <span class="stat-label">رضا العملاء</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- القسم الرئيسي -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h2>زواج موثوق في أسبوع واحد بإذن الله</h2>
+                    <p>موقع <strong>زواج السعودية</strong> هو المنصة الأكثر مصداقية وانتشاراً في المملكة العربية السعودية لتسهيل الزواج للمواطنين والمقيمين. نعمل تحت أطر شرعية وقانونية لضمان علاقة زوجية ناجحة ومستقرة.</p>
+                    <p>نحن نضمن لك خصوصية تامة، وتوافقاً في التفكير والرغبات، ومتابعة حتى اكتمال عقد الزواج. فريقنا من المستشارين المتخصصين جاهز لمساعدتك في كل خطوة.</p>
+                    
+                    <div class="trust-badge">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>خدمة موثوقة ومعتمدة من قبل مستخدمين سعوديين</span>
+                    </div>
+                </div>
+                
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="زواج سعودة ناجح">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الأخبار العاجلة -->
+    <section class="news-section">
+        <div class="container">
+            <h2 class="section-title">آخر الأخبار العاجلة للمملكة</h2>
+            
+            <div class="news-container">
+                <div class="news-ticker">
+                    <div class="news-header">
+                        <div class="news-title">
+                            <i class="fas fa-broadcast-tower"></i>
+                            <span>أخبار المملكة العاجلة</span>
+                            <span class="live-badge">مباشر</span>
+                        </div>
+                        <div class="news-time" id="current-time"></div>
+                    </div>
+                    
+                    <div class="news-content">
+                        <p id="news-text">📢 مجلس الوزراء السعودي يقر حزمة جديدة لدعم الشباب المقبلين على الزواج... 📢 وزارة العمل تعلن عن برامج دعم مالي للأسر الجديدة... 📢 إطلاق منصة "سكني" الجديدة لتوفير مساكن مناسبة للشباب...</p>
+                    </div>
+                                </div>
+                    
+                    <div class="news-content">
+                        <p id="news-text">📢 مجلس الوزراء السعودي يقر حزمة جديدة لدعم الشباب المقبلين على الزواج... 📢 وزارة العمل تعلن عن برامج دعم مالي للأسر الجديدة... 📢 إطلاق منصة "سكني" الجديدة لتوفير مساكن مناسبة للشباب...</p>
+                    </div>
+                    
+                    <a href="https://www.spa.gov.sa/" class="news-link" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> تابع الأخبار مباشرة من وكالة الأنباء السعودية
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الشهادات والتقييمات -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">ماذا يقول مستخدمونا السعوديون؟</h2>
+            
+            <div class="testimonials-grid">
+                <!-- شهادة 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="عمر" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h4>عمر أحمد</h4>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i> الرياض</div>
+                        </div>
+                    </div>
+                    
+                    <p class="testimonial-text">"والله العظيم الموقع رائع ومضمون. تواصلت معهم وخلوني أتعرف على بنت حلال من أسرة محترمة. الحمدلله تم الزواج في أقل من أسبوع. ما توقعت بتكون الخدمة سريعة وحلال بهالشكل."</p>
+                    
+                    <div class="testimonial-footer">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="saudi-dialect">لهجة سعودية</div>
+                    </div>
+                </div>
+                
+                <!-- شهادة 2 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="خالد" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h4>خالد المطيري</h4>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i> جدة</div>
+                        </div>
+                    </div>
+                    
+                    <p class="testimonial-text">"كنت أبحث عن شريكة حياة من سنين، وجربت أكثر من موقع. بس موقع زواج السعودية كان مختلف. الجدية والاحترافية والسرية اللي عندهم خلتني أثق فيهم. والحمدلله الآن متزوج من شهرين."</p>
+                    
+                    <div class="testimonial-footer">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="saudi-dialect">لهجة سعودية</div>
+                    </div>
+                </div>
+                
+                <!-- شهادة 3 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="نورة" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h4>نورة القحطاني</h4>
+                            <div class="location"><i class="fas fa-map-marker-alt"></i> الدمام</div>
+                        </div>
+                    </div>
+                    
+                    <p class="testimonial-text">"أخوي هو اللي عرّفني على الموقع، وكنت مترددة في البداية. لكن فريق العمل كان محترم جدًا ويحافظ على السرية. تعرفت على زوجي الحالي والحمدلله حياتنا سعيدة. أنصح كل بنت تبحث عن زوج صالح تجرب الموقع."</p>
+                    
+                    <div class="testimonial-footer">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="saudi-dialect">لهجة سعودية</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الإعلانات المتحركة -->
+    <section class="ads-section">
+        <div class="container">
+            <div class="ad-container">
+                <i class="fas fa-heart ad-icon left"></i>
+                <div class="ad-text">زواج ناجح في أسبوع واحد فقط!</div>
+                <div class="ad-subtext">مئات التجارب الناجحة تشهد بمصداقيتنا ونجاح وسيلتنا في الزواج الشرعي</div>
+                <i class="fas fa-ring ad-icon right"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم التواصل -->
+    <section class="contact-section">
+        <div class="container">
+            <h2 class="section-title">تواصل مباشر مع إدارة الموقع</h2>
+            <p>نحن هنا لمساعدتك في رحلتك نحو الزواج الناجح. تواصل معنا الآن للحصول على استشارة مجانية.</p>
+            
+            <a href="mailto:compny71@gmail.com?subject=طلب خدمة تزويج&body=مرحباً، أنا مقيم في المملكة العربية السعودية/مواطن سعودي وأرغب في الاستفسار عن خدمات التزويج." class="contact-button" id="contactBtn">
+                <i class="fas fa-headset"></i>
+                <span>تواصل مباشر مع الإدارة</span>
+            </a>
+            
+            <p class="contact-note">سيتم الرد على استفسارك في غضون 24 ساعة كحد أقصى</p>
+        </div>
+    </section>
+
+    <!-- الفوتر -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>عن زواج السعودية</h3>
+                    <p>المنصة الأولى في المملكة العربية السعودية للزواج الشرعي الموثوق. نعمل منذ عام 2015 على مساعدة آلاف السعوديين والمقيمين في إكمال نصف دينهم.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>روابط سريعة</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-angle-left"></i> شروط الاستخدام</a></li>
+                        <li><a href="#"><i class="fas fa-angle-left"></i> سياسة الخصوصية</a></li>
+                        <li><a href="#"><i class="fas fa-angle-left"></i> الأسئلة الشائعة</a></li>
+                        <li><a href="#"><i class="fas fa-angle-left"></i> قصص نجاح</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>معلومات الاتصال</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> compny71@gmail.com</li>
+                        <li><i class="fas fa-phone"></i> ٠٥٥-١٢٣-٤٥٦٧</li>
+                        <li><i class="fas fa-map-marker-alt"></i> المملكة العربية السعودية</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>جميع الحقوق محفوظة &copy; 2023 موقع زواج السعودية. تم التصميم بدقة ليلائم جميع الشاشات والأجهزة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // تحديث الوقت الحالي
+        function updateTime() {
+            const now = new Date();
+            const options = { 
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                timeZone: 'Asia/Riyadh'
+            };
+            const saudiTime = now.toLocaleDateString('ar-SA', options);
+            document.getElementById('current-time').textContent = saudiTime;
+        }
+        
+        // تحديث الأخبار العاجلة بشكل دوري
+        const newsItems = [
+            "📢 مجلس الوزراء السعودي يقر حزمة جديدة لدعم الشباب المقبلين على الزواج...",
+            "📢 وزارة العمل تعلن عن برامج دعم مالي للأسر الجديدة...",
+            "📢 إطلاق منصة 'سكني' الجديدة لتوفير مساكن مناسبة للشباب...",
+            "📢 ارتفاع نسبة الزواج في المملكة بنسبة ١٥٪ خلال الربع الأول من العام...",
+            "📢 وزارة العدل تطلق خدمة عقود الزواج الإلكترونية لتسهيل الإجراءات..."
+        ];
+        
+        let currentNewsIndex = 0;
+        
+        function rotateNews() {
+            const newsElement = document.getElementById('news-text');
+            newsElement.style.opacity = '0';
+            
+            setTimeout(() => {
+                currentNewsIndex = (currentNewsIndex + 1) % newsItems.length;
+                newsElement.textContent = newsItems[currentNewsIndex];
+                newsElement.style.opacity = '1';
+            }, 500);
+        }
+        
+        // زر التواصل العائم
+        document.getElementById('contactFloat').addEventListener('click', function() {
+            window.location.href = "mailto:compny71@gmail.com?subject=طلب خدمة تزويج&body=مرحباً، أنا مقيم في المملكة العربية السعودية/مواطن سعودي وأرغب في الاستفسار عن خدمات التزويج.";
+        });
+        
+        // زر التواصل الرئيسي
+        document.getElementById('contactBtn').addEventListener('click', function(e) {
+            // نترك الرابط يعمل بشكل طبيعي
+            // يمكن إضافة تحليلات أو تأكيد هنا
+            console.log('تم النقر على زر التواصل');
+        });
+        
+        // تأثيرات عند التمرير
+        function handleScrollAnimations() {
+            const elements = document.querySelectorAll('.testimonial-card, .news-container, .ad-container');
+            
+            elements.forEach(element => {
+                const rect = element.getBoundingClientRect();
+                const isVisible = rect.top < window.innerHeight - 100;
+                
+                if (isVisible) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        }
+        
+        // تهيئة الصفحة
+        document.addEventListener('DOMContentLoaded', function() {
+            updateTime();
+            setInterval(updateTime, 1000);
+            setInterval(rotateNews, 5000);
+            
+            // إعداد تأثيرات التمرير
+            window.addEventListener('scroll', handleScrollAnimations);
+            handleScrollAnimations(); // تشغيل عند التحميل
+            
+            // إعداد عناصر للأنيميشن
+            const animatedElements = document.querySelectorAll('.testimonial-card, .news-container, .ad-container');
+            animatedElements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            });
+        });
+    </script>
+</body>
+</html>
